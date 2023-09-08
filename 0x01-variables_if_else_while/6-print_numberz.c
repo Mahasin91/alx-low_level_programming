@@ -16,6 +16,6 @@ while (d <= 9)
 putchar(d + '0');
 d++;
 }
-putchar('\n')
+putchar('\n');
 return (0);
 }
