@@ -13,7 +13,7 @@ int ch;
 for (ch = 0; ch < 8; ch++)
 {
 _putchar(str[ch]);
-_putchar('\n');
 }
+_putchar('\n');
 return (0);
 }
