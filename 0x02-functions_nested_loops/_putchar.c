@@ -7,6 +7,7 @@
  * Description: write  function
  * return: on success 1.
  *         on error -1 is returned. and error is set appropriately
+ * Return: Always 0 (success)
 */
 
 int _putchar(char c)
