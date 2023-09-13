@@ -14,5 +14,5 @@ printf("%d, ", count);
 else
 for (count = n; count < 98; count++)
 printf("%d, ", count);
-printf("89\n");
+printf("98\n");
 }
