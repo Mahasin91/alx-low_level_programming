@@ -3,7 +3,7 @@
 /**
  * _islower - function to print lowercase alphabet using putchar prototype
  * @c: check input
- * return: return 1 if 'c' is lowercase otherwise always 0 (success)
+ * Return: returns 1 if 'c' is lowercase otherwise always 0 (success)
 */
 
 int _islower(int c)
