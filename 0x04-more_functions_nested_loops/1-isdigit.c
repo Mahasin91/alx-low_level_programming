@@ -2,7 +2,7 @@
 
 /**
  * _isupper - check if c is digit between 0 - 9
- * @c: input for alphabet
+ * @c: input
  * Return: 1 if it is a digit, 0 otherwise
 */
 
