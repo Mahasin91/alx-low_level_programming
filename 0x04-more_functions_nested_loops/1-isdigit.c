@@ -1,0 +1,15 @@
+#include"main.h"
+
+/**
+ * _isupper - check if c is digit between 0 - 9
+ * @c: input for alphabet
+ * Return: 1 if it is a digit, 0 otherwise
+*/
+
+int _isupper(int c)
+{
+if (c >= 48 && c <= 57)
+return (1);
+else
+return (0);
+}
