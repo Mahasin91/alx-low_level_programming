@@ -8,8 +8,8 @@
 
 double _sqrt(double x)
 {
-float sqrt x / 2;
-tmp = 0;
+float sqrt = x / 2;
+float tmp = 0;
 while (sqrt != tmp)
 {
 tmp = sqrt;
