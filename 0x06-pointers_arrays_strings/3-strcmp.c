@@ -21,5 +21,5 @@ s1++;
 s2++;
 }
 
-return (dest);
+return (q);
 }
