@@ -42,7 +42,7 @@ while (*s)
 {
 if (isdelimiter(*s))
 founddelimiter = 1;
-else if (islower(*s) && founddelimiter)
+else if (islower(*s))
 {
 *s -= 32;
 founddelimiter = 0;
