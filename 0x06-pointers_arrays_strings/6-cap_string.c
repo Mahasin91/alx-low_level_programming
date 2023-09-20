@@ -29,7 +29,7 @@ return (0);
 }
 
 /**
- * cap_string - function convert to upper
+ * cap_string - function capitalizes words of string
  * @s: pointer string
  * Return: ptr
  */
