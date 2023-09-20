@@ -4,7 +4,7 @@
  * _strcmp - function compare string to another
  * @s1: pointer to dest
  * @s2: pointer to src
- * Return: return dest
+ * Return: return q
  */
 
 int _strcmp(char *s1, char *s2)
