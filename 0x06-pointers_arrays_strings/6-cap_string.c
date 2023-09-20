@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
- * islower - check if ascii is lowercase
+ * isLower - check if ascii is lowercase
  * @c: char
  * Return: 1 if true 0 if false
  */
 
-int islower(char c)
+int isLower(char c)
 {
 return (c >= 97 && c <= 122);
 }
@@ -42,7 +42,7 @@ while (*s)
 {
 if (isdelimiter(*s))
 founddelimiter = 1;
-else if (islower(*s) && founddelimiter)
+else if (isLower(*s) && founddelimiter)
 {
 *s -= 32;
 founddelimiter = 0;
