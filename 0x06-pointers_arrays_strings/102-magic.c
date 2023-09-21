@@ -1,23 +1,57 @@
+#include "main.h"
 #include <stdio.h>
+/**
+ * print_line - prints a buffer
+ * @c: buffer
+ * @s: bytes of buffer
+ * @l: line of buffer
+ *
+ * Return: void
+ */
 
-int main(void)
+void print_line(char *c, int s, int l)
 {
-  int n;
-  int a[5];
-  int *p;
+int i, k;
+for (i = 0; i <= 9; i++)
+{
+if (i <= s)
+printf("%02x", c[l * 10 + i]);
+else
+printf("  ");
+if (i % 2)
+putchar(' ');
+}
+for (k = 0; k <= s; k++)
+{
+if (c[l * 10 + k] > 31 && c[l * 10 + k] < 127)
+putchar(c[l * 10 + k]);
+else
+putchar('.');
+}
+}
 
-  a[2] = 1024;
-  p = &n;
-  /*
-   * write your line of code here...
-   * Remember:
-   * - you are not allowed to use a
-   * - you are not allowed to modify p
-   * - only one statement
-   * - you are not allowed to code anything else than this line of code
-   */
-  *(p + 5) = 98;
-  /* ...so that this prints 98\n */
-  printf("a[2] = %d\n", a[2]);
-  return (0);
+/**
+ * print_buffer - prints a buffer
+ * @b: buffer
+ * @size: size of buffer
+ * Return: void
+ */
+void print_buffer(char *b, int size)
+{
+int j;
+for (j = 0; j <= (size - 1) / 10 && size; j++)
+{
+printf("%08x: ", j * 10);
+if (j < size / 10)
+{
+print_line(b, 9, j);
+}
+else
+{
+print_line(b, size % 10 - 1, j);
+}
+putchar('\n');
+}
+if (size == 0)
+putchar('\n');
 }
