@@ -1,79 +1,58 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
- * isprintableascii - check if n is a printable ascii char
- * @n: int
- * Return: 1 if true 0 if false
-*/
+ * print_line - prints a s bytes of a buffer
+ * @c: buffer to print
+ * @s: bytes of buffer to print
+ * @l: line of buffer to print
+ *
+ * Return: void
+ */
 
-int isprintableascii(int n)
+void print_line(char *c, int s, int l)
 {
-return (n >= 32 && n <= 126);
-}
-
-/**
- * printhexes - print hex values for string
- * @b: string to print
- * @start: starting position
- * @end: ending position
-*/
-
-void printhexes(char *b, int start, int end)
+int j, k;
+for (j = 0; j <= 9; j++)
 {
-int i = 0;
-while (i < 10)
-{
-if (i < end)
-printf("%02x", *(b + start + i));
+if (j <= s)
+printf("%02x", c[l * 10 + j]);
 else
 printf("  ");
-if (i % 2)
-printf(" ");
-i++;
+if (j % 2)
+putchar(' ');
+}
+for (k = 0; k <= s; k++)
+{
+if (c[l * 10 + k] > 31 && c[l * 10 + k] < 127)
+putchar(c[l * 10 + k]);
+else
+putchar('.');
 }
 }
 
 /**
- * printascii - print ascii values for string
- * @p: string to print
- * @start: starting position
- * @end: ending position
-*/
-
-void printascii(char *p, int start, int end)
-{
-int ch, i = 0;
-while (i < end)
-{
-ch = *(b + i + start);
-if (!isprintableascii(ch))
-ch = 46;
-printf("%c", ch);
-i++;
-}
-}
-
-/**
- * print_buffer - print a buffer
- * @b: string
+ * print_buffer - prints a buffer
+ * @b: buffer to print
  * @size: size of buffer
-*/
-
+ *
+ * Return: void
+ */
 void print_buffer(char *b, int size)
 {
-int start, end;
-if (size > 0)
+int i;
+for (i = 0; i <= (size - 1) / 10 && size; i++)
 {
-for (start = 0; start < size; start += 10)
+printf("%08x: ", i * 10);
+if (i < size / 10)
 {
-end = (size - start < 10) ? size - start : 10;
-printf("%08x: ", start);
-printhexes(b, start, end);
-printascii(b, start, end);
-printf("\n");
-}
+print_line(b, 9, i);
 }
 else
-printf("\n");
+{
+print_line(b, size % 10 - 1, i);
+}
+putchar('\n');
+}
+if (size == 0)
+putchar('\n');
 }
