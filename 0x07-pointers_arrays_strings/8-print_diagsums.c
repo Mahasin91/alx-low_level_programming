@@ -14,7 +14,7 @@ int it, x, = 0, y = 0;
 for (it = 0; it < size; it++)
 {
 x += a[it];
-y = a[size - it - 1];
+y += a[size - it - 1];
 a += size;
 }
 printf("%d, ", x);
