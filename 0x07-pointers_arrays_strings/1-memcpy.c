@@ -5,7 +5,7 @@
  * @dest: memory space
  * @src: source
  * @n: byte to use
- * Return: pointeer s
+ * Return: pointer dest
 */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
