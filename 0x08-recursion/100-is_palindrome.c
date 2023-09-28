@@ -2,7 +2,7 @@
 
 /**
  * palind2 - obtains length of a
- * @a: string
+ * @x: string
  * @l: integer
  *
  * Return: int
@@ -16,7 +16,7 @@ int palind2(char *x, int l)
 
 /**
  * palind3 - compares string vs string reverse
- * @a: string
+ * @x: string
  * @l: length
  *
  * Return: int
