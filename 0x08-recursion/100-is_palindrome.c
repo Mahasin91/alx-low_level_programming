@@ -7,11 +7,11 @@
  *
  * Return: int
  */
-int palind2(char *a, int l)
+int palind2(char *x, int l)
 {
-	if (*a == 0)
+	if (*x == 0)
 		return (l - 1);
-	return (palind2(a + 1, l + 1));
+	return (palind2(x + 1, l + 1));
 }
 
 /**
@@ -22,13 +22,13 @@ int palind2(char *a, int l)
  * Return: int
  */
 
-int palind3(char *a, int l)
+int palind3(char *x, int l)
 {
-	if (*a != *(a + l))
+	if (*x != *(x + l))
 		return (0);
-	else if (*a == 0)
+	else if (*x == 0)
 		return (1);
-	return (palind3(a + 1, l - 2));
+	return (palind3(x + 1, l - 2));
 }
 
 /**
