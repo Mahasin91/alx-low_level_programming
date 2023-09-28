@@ -1,17 +1,20 @@
 #include "main.h"
 
 /**
- * _pow_recursion - description
- * @x: base
- * @y: power
+ * factorial - factorial of n
+ * @n: number
  * Return: int
 */
 
-int _pow_recursion(int x, int y)
+int factorial(int n)
 {
-if (y < 0)
+if (n < 0)
+{
 return (-1);
-if (y == 0)
+}
+else if (n == 0)
+{
 return (1);
-return (x * _pow_recursion(x, y - 1));
+}
+return (n * factorial(n - 1));
 }
