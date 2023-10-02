@@ -4,13 +4,13 @@
 #include <stdbool.h>
 
 /**
- * coinConverter - function that does all the mathematics
- * @i: int
+ * coinConverter - Helper function that does all the mathematics
+ * @i: Passed in variable from main for calculations
  * Return: The number of coins needed minimum for the passed in variable
  */
 int coinConverter(int i)
 {
-	int c = 0;
+	int count = 0;
 
 	while (i != 0)
 	{
@@ -32,23 +32,23 @@ int coinConverter(int i)
 		else
 			i -= 1;
 
-		c++;
+		count++;
 	}
 
-	return (c);
+	return (count);
 }
 
 /**
  * main - Takes in exactly one argument for minimum coin count
- * @argc: Number
+ * @argc: Number of command line arguments
  * @argv: Array name
- * Return: 0
+ * Return: 0 if exactly 1 argument is passed into this program, 1 otherwise
  */
 int main(int argc, char *argv[])
 {
-	int i, c;
+	int i, coin;
 
-	c = 0;
+	coin = 0;
 
 	if (argc != 2)
 	{
@@ -62,9 +62,9 @@ int main(int argc, char *argv[])
 		printf("0\n");
 	else
 	{
-		c = coinConverter(i);
+		coin = coinConverter(i);
 
-		printf("%d\n", c);
+		printf("%d\n", coin);
 	}
 
 	return (0);
