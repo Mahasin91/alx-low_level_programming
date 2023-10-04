@@ -2,9 +2,9 @@
 
 /**
  * *create_array - array of char
- * @size: int 
+ * @size: int
  * @c: char
- * return: pointer
+ * Return: pointer
 */
 
 char *create_array(unsigned int size, char c)
