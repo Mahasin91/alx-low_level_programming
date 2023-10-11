@@ -2,7 +2,7 @@
 
 /**
  * int_index - search for int
- * @arra: array
+ * @array: array
  * @size: size
  * @cmp: compare function
  * Return: int
