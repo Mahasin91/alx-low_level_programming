@@ -1,12 +1,11 @@
 #ifndef DOG_H
-#define DOG_h
+#define DOG_H
 
 /**
  * struct dog - struct
  * @name: name
  * @age: age
  * @owner: ownerś name
- * 
  * Description: dog struct
 */
 
